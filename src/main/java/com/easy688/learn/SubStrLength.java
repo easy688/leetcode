@@ -11,9 +11,9 @@ import java.util.*;
  */
 public class SubStrLength {
     public static void main(String[] args) {
-        String str="pwwkewcvv";
+        String str="abcabcdd";
         System.out.println(strSub(str));;
-        System.out.println(lengthOfLongestSubstring(str));
+        System.out.println(lengthOfLongestSubstring1(str));
 
     }
 
@@ -82,5 +82,28 @@ public class SubStrLength {
         return ans;
     }
 
+    /**
+     * 理解了官方的写法后自己的写法
+     * @param s
+     * @return
+     */
+    public static int lengthOfLongestSubstring1(String s){
+        Set<Character> set=new HashSet<>();
+        int rk=0;
+        int maxValue=0;
+        for (int i = 0; i <s.length() ; i++) {
+            if(i!=0){
+                set.remove(s.charAt(i-1));
+            }
+            while(rk<s.length()&&!set.contains(s.charAt(rk))){
+                set.add(s.charAt(rk));
+                rk++;
+            }
+            maxValue=Math.max(maxValue,rk-i);
+        }
+
+        return maxValue;
+
+    }
 
 }
