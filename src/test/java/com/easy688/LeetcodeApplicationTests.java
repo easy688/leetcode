@@ -9,6 +9,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 @SpringBootTest
 class LeetcodeApplicationTests {
