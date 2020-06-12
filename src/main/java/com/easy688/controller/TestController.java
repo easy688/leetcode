@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class TestController {
     private Integer num=0;
-    private String version="2";
+    private String version="3";
     @GetMapping("/test")
     @ResponseBody
     public String test(){
