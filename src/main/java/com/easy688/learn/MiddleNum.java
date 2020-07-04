@@ -14,7 +14,6 @@ public class MiddleNum {
         int[] nums1={1,2,3,9};
         int[] nums2={2,3,4,7};
         System.out.println(findMedianSortedArrays(nums1,nums2));
-        System.out.println((double) (1 + 2 + 3 + 9 + 2 + 3 + 4 + 7) / 8);
 
     }
     public static double findMedianSortedArrays(int[] nums1, int[] nums2) {
