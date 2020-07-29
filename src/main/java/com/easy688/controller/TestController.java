@@ -27,6 +27,6 @@ public class TestController {
     }*/
     @DeleteMapping
     public void test(){
-        System.out.println("dev");
+        System.out.println("dev1111");
     }
 }
